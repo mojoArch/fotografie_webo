@@ -193,7 +193,7 @@
     <main class="wall" aria-label="Fotografieportfolio" tabindex="0">
         @for ($copy = 0; $copy < 3; $copy++)
             <section class="gallery" aira-label="Fotocollectie">
-                @for ($i = 1; $i <= 47 i++;)
+                 @for ($i = 1; $i <= 47; $i++)
                 <figure class="photo">
                     <img src="{{asset('images/foto' . $i . '.jpg') }}"
                      alt="Foto {{ $i }} gemaakt door Jamie Vis"
