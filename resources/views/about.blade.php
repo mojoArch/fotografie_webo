@@ -30,11 +30,13 @@
           }
 
           main {
-              min-height: 80vh;
-              display: flex;
-              align-items: center;
-              padding: 24px;
-          }
+      min-height: 80vh;
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      align-items: center;
+      gap: clamp(32px, 6vw, 100px);
+      padding: 24px;
+  }
 
           h1 {
               margin: 0;
@@ -52,18 +54,64 @@
   h1 span {
       display: block;
   }
+
+  .about-text {
+      max-width: 480px;
+  }
+
+  .about-text h2 {
+      margin: 0 0 24px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #999;
+  }
+
+  .about-text p {
+      margin: 0 0 20px;
+      font-size: clamp(18px, 1.6vw, 24px);
+      line-height: 1.6;
+      color: #ddd;
+  }
+
+  @media (max-width: 800px) {
+      main {
+          grid-template-columns: 1fr;
+          gap: 48px;
+          padding: 40px 24px;
+      }
+  }
       </style>
 </head>
      <header>
           <a href="/">Photography | Gallery</a>
       </header>
 
-      <main>
-          <h1>
-              <span class="first-name">Jamie</span>
-              <span class="last-name">Vis</span>
-          </h1>
-      </main>
+
+  <main>
+      <h1>
+          <span class="first-name">Jamie</span>
+          <span class="last-name">Vis</span>
+      </h1>
+
+      <section class="about-text" aria-labelledby="about-title">
+          <h2 id="about-title">Over mij</h2>
+
+          <p>
+              
+Hoi, ik ben Jamie. Fotograaf in opleiding met een passie voor portretten en nabewerking. 
+Mijn stijl is goed terug te zien in egale kleuren en flitsgebruik. 
+Ik ben een open-minded en nieuwsgierig persoon die voor veel openstaat. 
+
+          </p>
+
+          <p>
+Ik wil mezelf nog verder ontwikkelen in concepten schrijven, en modellen regelen. 
+Mijn doel is om dit uiteindelijk mijn baan te maken, waar ik veel mensen blij mee kan maken.
+Interesse? Stuur gerust een berichtje!
+          </p>
+      </section>
+  </main>
 
       <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
 
@@ -90,15 +138,5 @@
               }, 0);
           }
       </script>
-<body>
 
-    <main>
-
-  <article>
-    <section>
-
-    </section>
-  </article>
-    </main>
-</body>
 </html>
