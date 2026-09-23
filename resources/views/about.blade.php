@@ -54,12 +54,51 @@
   }
       </style>
 </head>
+     <header>
+          <a href="/">Photography | Gallery</a>
+      </header>
+
+      <main>
+          <h1>
+              <span class="first-name">Jamie</span>
+              <span class="last-name">Vis</span>
+          </h1>
+      </main>
+
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+
+      <script>
+          if (
+              window.gsap &&
+              !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+          ) {
+              const timeline = gsap.timeline({
+                  defaults: {
+                      duration: 1.8,
+                      ease: 'power3.out'
+                  }
+              });
+
+              timeline.from('.first-name', {
+                  x: () => window.innerWidth,
+                  opacity: 0
+              });
+
+              timeline.from('.last-name', {
+                  x: () => -window.innerWidth,
+                  opacity: 0
+              }, 0);
+          }
+      </script>
 <body>
-    <header> 
-        <a href="/">Fotograaf</a>
-    </header>
+
     <main>
-        <h1>Jamie<br>Vis</h1>
+
+  <article>
+    <section>
+
+    </section>
+  </article>
     </main>
 </body>
 </html>

@@ -178,7 +178,7 @@
 
 <body>
     <header class="header">
-        <a href="name"> Jamie Vis</a>
+        <a href="#"> Jamie Vis</a>
         <nav class="nav" aria-label="Hoofdnavigatie">
             <a href="https://www.instagram.com/jvis.photography?stkn=bGZlb2V1YWF1aGNn"
             target="_blank" rel="noopener noreferrer" >
@@ -186,7 +186,7 @@
             </a>
             <a href="inkedin.com/in/jamie-vis-8a774b349" target="_blank" rel="noopener noreferrer"
             >Linkedin</a>
-            <a href="#about" id="about-link">About</a>
+            <a href="{{ url('/about') }}">About</a>
         </nav>
     </header>
 
@@ -204,17 +204,6 @@
          @endfor
     </main>
 
-    <dialog class="about">
-        <h1>Jamie Vis</h1>
-        <p>Hoi, ik ben Jamie. Fotograaf in opleiding met een passie voor portretten en nabewerking. 
-            Mijn stijl is goed terug te zien in egale kleuren en flitsgebruik. 
-            Ik ben een open-minded en nieuwsgierig persoon die voor veel openstaat. 
-            Ik wil mezelf nog verder ontwikkelen in concepten schrijven, en modellen regelen. 
-            Mijn doel is om dit uiteindelijk mijn baan te maken, waar ik veel mensen blij mee kan maken!</p>
-        <form method="dialog">
-            <button>Close</button>
-        </form>
-    </dialog>
 
     <script>
         const wall = document.querySelector('.wall');
@@ -235,12 +224,7 @@ wall.scrollTop += collectionHeight;
             }
         });
         window.addEventListener('resize', measureGalary);
-        const about = document.querySelector('#about');
-        const aboutLink = document.querySelector('about-link');
-        aboutLink.addEventListener('click', (event) => {
-            event.preventDefault();
-            about.showModal();
-        });
+        ;
     </script>
 
     </body>
