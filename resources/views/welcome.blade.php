@@ -206,7 +206,11 @@
 
     <dialog class="about">
         <h1>Jamie Vis</h1>
-        <p>info over james</p>
+        <p>Hoi, ik ben Jamie. Fotograaf in opleiding met een passie voor portretten en nabewerking. 
+            Mijn stijl is goed terug te zien in egale kleuren en flitsgebruik. 
+            Ik ben een open-minded en nieuwsgierig persoon die voor veel openstaat. 
+            Ik wil mezelf nog verder ontwikkelen in concepten schrijven, en modellen regelen. 
+            Mijn doel is om dit uiteindelijk mijn baan te maken, waar ik veel mensen blij mee kan maken!</p>
         <form method="dialog">
             <button>Close</button>
         </form>
