@@ -213,7 +213,30 @@
     </dialog>
 
     <script>
+        const wall = document.querySelector('.wall');
+        const galary = document.querySelector('.galary');
+        let collectionHeight = 0;
+        function measureGalary() {
+            collectionHeight = galary.getBoundingClientRect().height;
+            wall.scrollTop = collectionHeight;
+        }
+        requestAnimationFrame(measureGalary);
+        wall.addEventListener('.scroll' , () => {
+            if(!collectionHeight) return;
+            if(Wall.scrollTop >= collectionHeight * 2) {
+                wall.scrollTop -= collectionHeight; 
+} else if (Wall.scrollTop < collectionHeight);{
+wall.scrollTop += collectionHeight;
         
+            }
+        });
+        window.addEventListener('resize', measureGalary);
+        const about = document.querySelector('#about');
+        const aboutLink = document.querySelector('about-link');
+        aboutLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            about.showModal();
+        });
     </script>
 
     </body>
