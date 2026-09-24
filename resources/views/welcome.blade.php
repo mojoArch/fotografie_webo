@@ -184,7 +184,7 @@
             target="_blank" rel="noopener noreferrer" >
             instagram   
             </a>
-            <a href="inkedin.com/in/jamie-vis-8a774b349" target="_blank" rel="noopener noreferrer"
+            <a href="linkedin.com/in/jamie-vis-8a774b349" target="_blank" rel="noopener noreferrer"
             >Linkedin</a>
             <a href="{{ url('/about') }}">About</a>
         </nav>
@@ -205,27 +205,28 @@
     </main>
 
 
-    <script>
-        const wall = document.querySelector('.wall');
-        const galary = document.querySelector('.galary');
-        let collectionHeight = 0;
-        function measureGalary() {
-            collectionHeight = galary.getBoundingClientRect().height;
-            wall.scrollTop = collectionHeight;
-        }
-        requestAnimationFrame(measureGalary);
-        wall.addEventListener('.scroll' , () => {
-            if(!collectionHeight) return;
-            if(Wall.scrollTop >= collectionHeight * 2) {
-                wall.scrollTop -= collectionHeight; 
-} else if (Wall.scrollTop < collectionHeight);{
-wall.scrollTop += collectionHeight;
-        
-            }
-        });
-        window.addEventListener('resize', measureGalary);
-        ;
-    </script>
+<script>
+      const wall = document.querySelector('.wall');
+      const gallery = document.querySelector('.gallery');
+
+let collectionHeight = 0;
+      function measureGallery() {
+          collectionHeight = gallery.getBoundingClientRect().height;
+        wall.scrollTop = collectionHeight;
+      }
+      requestAnimationFrame(measureGallery);
+wall.addEventListener('scroll', () => {
+          if (!collectionHeight) return;
+
+          if (wall.scrollTop >= collectionHeight * 2) {
+              wall.scrollTop -= collectionHeight;
+          } else if (wall.scrollTop < collectionHeight) {
+              wall.scrollTop += collectionHeight;
+          }
+      });
+
+      window.addEventListener('resize', measureGallery);
+  </script>
 
     </body>
 
