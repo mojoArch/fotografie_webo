@@ -99,7 +99,7 @@
 
           <p>
               
-Hoi, ik ben Jamie. Fotograaf in opleiding met een passie voor portretten en nabewerking. 
+Hoi, ik ben Jamie Vis. Fotograaf in opleiding met een passie voor portretten en nabewerking. 
 Mijn stijl is goed terug te zien in egale kleuren en flitsgebruik. 
 Ik ben een open-minded en nieuwsgierig persoon die voor veel openstaat. 
 
