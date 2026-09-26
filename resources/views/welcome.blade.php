@@ -190,23 +190,23 @@
         </nav>
     </header>
 
-    <main class="wall" aria-label="Fotografieportfolio" tabindex="0">
-        @for ($copy = 0; $copy < 3; $copy++)
-            <section class="gallery" aira-label="Fotocollectie">
-                 @for ($i = 1; $i <= 47; $i++)
-                <figure class="photo">
-                    <img src="{{asset('images/foto' . $i . '.jpg') }}"
-                     alt="Foto {{ $i }} gemaakt door Jamie Vis"
-                     loading="lazy">
-          </figure>
-            @endfor
-         </section>
-         @endfor
-    </main>
+  <main class="wall" aria-label="Fotografieportfolio" tabindex="0">
+      <section class="gallery" aria-label="Fotocollectie">
+          @for ($i = 1; $i <= 47; $i++)
+              <figure class="photo">
+                  <img
+                      src="{{ asset('images/foto' . $i . '.jpg') }}"
+                      alt="Foto {{ $i }} gemaakt door Jamie Vis"
+                      loading="lazy"
+                  >
+              </figure>
+          @endfor
+      </section>
+  </main>
 
 
 <script>
-      const wall = document.querySelector('.wall');
+
       const gallery = document.querySelector('.gallery');
 
 let collectionHeight = 0;
@@ -225,7 +225,7 @@ wall.addEventListener('scroll', () => {
           }
       });
 
-      window.addEventListener('resize', measureGallery);
+
   </script>
 
     </body>
