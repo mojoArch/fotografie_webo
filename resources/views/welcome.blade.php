@@ -174,11 +174,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-                <title>Jamie Vis | Fotografie   </title>
+                <title>J.VIS | Fotografie   </title>
 
 <body>
     <header class="header">
-        <a href="#"> Jamie Vis</a>
+        <a href="#"> JAMIE VIS</a>
         <nav class="nav" aria-label="Hoofdnavigatie">
             <a href="https://www.instagram.com/jvis.photography?stkn=bGZlb2V1YWF1aGNn"
             target="_blank" rel="noopener noreferrer" >
@@ -192,15 +192,20 @@
 
   <main class="wall" aria-label="Fotografieportfolio" tabindex="0">
       <section class="gallery" aria-label="Fotocollectie">
-          @for ($i = 1; $i <= 47; $i++)
-              <figure class="photo">
-                  <img
-                      src="{{ asset('images/foto' . $i . '.jpg') }}"
-                      alt="Foto {{ $i }} gemaakt door Jamie Vis"
-                      loading="lazy"
-                  >
-              </figure>
-          @endfor
+
+  @for ($i = 1; $i <= 56; $i++)
+      @php
+          $extension = $i <= 49 ? 'jpg' : 'webp';
+      @endphp
+
+      <figure class="photo">
+          <img
+              src="{{ asset('images/foto' . $i . '.' . $extension) }}"
+              alt="J.VIS"
+              loading="lazy"
+          >
+      </figure>
+      @endfor
       </section>
   </main>
 
