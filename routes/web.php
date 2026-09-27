@@ -83,17 +83,17 @@ Route::get('/about', function () {
           ],
             12 => [
             'title' => 'Marijn',
-            'location' => 'Amsterdam',
+            'location' => 'Noord scharwoude',
             'description' => 'het verhaal van begin tot het heden.',
           ],
             13 => [
             'title' => 'Marijn',
-            'location' => 'Amsterdam',
+            'location' => 'Noord scharwoude',
             'description' => 'het verhaal van begin tot het heden.',
           ],
             14 => [
             'title' => 'Marijn',
-            'location' => 'Amsterdam',
+            'location' => 'Noord scharwoude',
             'description' => 'het verhaal van begin tot het heden.',
           ],
            15 => [
@@ -252,7 +252,7 @@ Route::get('/about', function () {
             'description' => 'Tijdens het hiken boven op een berg dit bezonderlijk afbeelding genomen.',
           ],
       44 => [
-            'title' => 'Nazli',
+            'title' => 'The Blue Glance',
             'location' => 'Bosnia',
             'description' => 'Deze unieke foto in beeld genomen.',
           ],
@@ -289,12 +289,12 @@ Route::get('/about', function () {
           ],
             51 => [
             'title' => 'Marijn',
-            'location' => 'Amsterdam',
+            'location' => 'Noord scharwoude',
             'description' => 'het verhaal van begin tot het heden.',
           ],
             52 => [
             'title' => 'Marijn',
-            'location' => 'Amsterdam',
+            'location' => 'Noord scharwoude',
             'description' => 'het verhaal van begin tot het heden.',
           ],
                 53 => [
@@ -312,6 +312,17 @@ Route::get('/about', function () {
             'location' => 'Texel',
             'description' => 'ik kwam een dame tegen een hele spontane moment leverde nog steeds één van mijn favoriete foto’s ooit op. Niet vanwege het technische aspect, want de foto is verre van perfect, maar vanwege het moment en het gevoel dat ik ervan kreeg. Deze dag heeft mij enorm gemotiveerd om verder te groeien in fotografie en doet dat nog steeds. Een goed begin.',
           ],
+           56 => [
+            'title' => 'Marijn',
+            'location' => 'Noord scharwoude',
+            'description' => 'het verhaal van begin tot het heden.',
+          ],
+            57 => [
+              'title' => 'Artist Presskit',
+              'location' => 'Zaandam',
+              'description' => 'Voor mijn projectweek fotografeerde ik Nazli. Tijdens de shoot heb ik haar in een hip hop sfeer vastgelegd.
+               Hieronder vind je een selectie van mijn favoriete beelden.',
+          ],
           
 ];
 
@@ -321,7 +332,7 @@ Route::get('/about', function () {
       'description' => 'Beschrijving volgt.',
   ];
 
-  $extension = $number <= 49 ? 'jpg' : 'webp';
+  $extension = $number <= 52 ? 'jpg' : 'webp';
 
   // Zoek de andere foto's met precies dezelfde titel.
   $relatedPhotos = [];
@@ -331,7 +342,7 @@ Route::get('/about', function () {
           $details['title'] === $photo['title'] &&
           $photoNumber !== $number
       ) {
-          $relatedExtension = $photoNumber <= 48 ? 'jpg' : 'webp';
+          $relatedExtension = $photoNumber <= 52 ? 'jpg' : 'webp';
 
           $relatedPhotos[] = [
               'number' => $photoNumber,

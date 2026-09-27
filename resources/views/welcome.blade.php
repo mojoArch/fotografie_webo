@@ -197,7 +197,7 @@
   <main class="wall" aria-label="Fotografieportfolio" tabindex="0">
       <section class="gallery" aria-label="Fotocollectie">
 
-  @for ($i = 1; $i <= 58; $i++)
+  @for ($i = 1; $i <= 57; $i++)
       @php
           $extension = $i <= 52 ? 'jpg' : 'webp';
       @endphp
