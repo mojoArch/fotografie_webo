@@ -124,7 +124,7 @@
                   >
 
                   <figcaption>
-                      FOTO {{ $number }} VAN 53
+                      FOTO {{ $number }} VAN 56
                   </figcaption>
               </figure>
 
