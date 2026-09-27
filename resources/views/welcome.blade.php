@@ -168,6 +168,10 @@
               }
           }
 
+  .photo a {
+      display: block;
+  }
+
     </style>
                   </head>
 
@@ -198,40 +202,19 @@
           $extension = $i <= 49 ? 'jpg' : 'webp';
       @endphp
 
-      <figure class="photo">
+
+  <figure class="photo">
+      <a href="{{ url('/foto/' . $i) }}">
           <img
               src="{{ asset('images/foto' . $i . '.' . $extension) }}"
-              alt="J.VIS"
+              alt="Foto {{ $i }} gemaakt door Jamie Vis"
               loading="lazy"
           >
-      </figure>
+      </a>
+  </figure>
       @endfor
       </section>
   </main>
-
-
-<script>
-
-      const gallery = document.querySelector('.gallery');
-
-let collectionHeight = 0;
-      function measureGallery() {
-          collectionHeight = gallery.getBoundingClientRect().height;
-        wall.scrollTop = collectionHeight;
-      }
-      requestAnimationFrame(measureGallery);
-wall.addEventListener('scroll', () => {
-          if (!collectionHeight) return;
-
-          if (wall.scrollTop >= collectionHeight * 2) {
-              wall.scrollTop -= collectionHeight;
-          } else if (wall.scrollTop < collectionHeight) {
-              wall.scrollTop += collectionHeight;
-          }
-      });
-
-
-  </script>
 
     </body>
 
