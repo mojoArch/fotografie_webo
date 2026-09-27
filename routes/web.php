@@ -27,7 +27,7 @@ Route::get('/about', function () {
           2 => [
               'title' => 'The Blue Glance',
               'location' => 'Bosnia',
-              'description' => 'Een rustig moment aan zee.',
+              'description' => 'Een inspirerend moment',
           ],
           3 => [
              'title' => 'Straat-Portretten',
@@ -59,7 +59,7 @@ Route::get('/about', function () {
             'description' => 'het verhaal van begin tot het heden.',
           ],
            8 => [
-            'title' => 'Mereld',
+            'title' => 'Merel',
             'location' => 'Amsterdam',
             'description' => 'het verhaal van begin tot het heden.',
           ],
@@ -97,7 +97,7 @@ Route::get('/about', function () {
             'description' => 'het verhaal van begin tot het heden.',
           ],
            15 => [
-            'title' => 'Marijn',
+            'title' => 'Samanthia',
             'location' => 'Amsterdam',
             'description' => 'het verhaal van begin tot het heden.',
           ],  
@@ -278,26 +278,24 @@ Route::get('/about', function () {
             'description' => 'het verhaal van begin tot het heden.',
           ],
             49 => [
-            'title' => 'Marijn',
-            'location' => 'Amsterdam',
-            'description' => 'het verhaal van begin tot het heden.',
+            'title' => 'The Blue Glance',
+            'location' => 'Bosnia',
+            'description' => 'Een inspirenrd moment.',
           ],
              50 => [
+            'title' => 'The Blue Glance',
+            'location' => 'Bosnia',
+            'description' => 'Een inspirenrd moment.',
+          ],
+            51 => [
             'title' => 'Marijn',
             'location' => 'Amsterdam',
             'description' => 'het verhaal van begin tot het heden.',
           ],
-           51 => [
-              'title' => 'Artist Presskit',
-              'location' => 'Zaandam',
-              'description' => 'Voor mijn projectweek fotografeerde ik Nazli. Tijdens de shoot heb ik haar in een hip hop sfeer vastgelegd.
-               Hieronder vind je een selectie van mijn favoriete beelden.',
-          ],
-                52 => [
-              'title' => 'Artist Presskit',
-              'location' => 'Zaandam',
-              'description' => 'Voor mijn projectweek fotografeerde ik Nazli. Tijdens de shoot heb ik haar in een hip hop sfeer vastgelegd.
-               Hieronder vind je een selectie van mijn favoriete beelden.',
+            52 => [
+            'title' => 'Marijn',
+            'location' => 'Amsterdam',
+            'description' => 'het verhaal van begin tot het heden.',
           ],
                 53 => [
             'title' => 'Straat-Portretten',
@@ -317,19 +315,38 @@ Route::get('/about', function () {
           
 ];
 
-      $photo = $photos[$number] ?? [
-          'title' => "Foto {$number}",
-          'location' => 'Nog invullen',
-          'description' => 'Beschrijving volgt.',
-      ];
+  $photo = $photos[$number] ?? [
+      'title' => "Foto {$number}",
+      'location' => 'Nog invullen',
+      'description' => 'Beschrijving volgt.',
+  ];
 
-      $extension = $number <= 48 ? 'jpg' : 'webp';
+  $extension = $number <= 49 ? 'jpg' : 'webp';
 
-      return view('foto', [
-          'number' => $number,
-          'image' => "images/foto{$number}.{$extension}",
-          'title' => $photo['title'],
-          'location' => $photo['location'],
-          'description' => $photo['description'],
-      ]);
+  // Zoek de andere foto's met precies dezelfde titel.
+  $relatedPhotos = [];
+
+  foreach ($photos as $photoNumber => $details) {
+      if (
+          $details['title'] === $photo['title'] &&
+          $photoNumber !== $number
+      ) {
+          $relatedExtension = $photoNumber <= 48 ? 'jpg' : 'webp';
+
+          $relatedPhotos[] = [
+              'number' => $photoNumber,
+              'image' => "images/foto{$photoNumber}.{$relatedExtension}",
+              'title' => $details['title'],
+          ];
+      }
+  }
+
+  return view('foto', [
+      'number' => $number,
+      'image' => "images/foto{$number}.{$extension}",
+      'title' => $photo['title'],
+      'location' => $photo['location'],
+      'description' => $photo['description'],
+      'relatedPhotos' => $relatedPhotos,
+  ]);
   })->whereNumber('id');
