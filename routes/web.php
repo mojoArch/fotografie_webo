@@ -16,12 +16,13 @@ Route::get('/about', function () {
 
       abort_if($number < 1 || $number > 56, 404);
 
-      // Voorbeeldteksten: vervang deze door je eigen gegevens.
+      
       $photos = [
           1 => [
-              'title' => 'Avondlicht',
-              'location' => 'Amsterdam',
-              'description' => 'Het laatste zonlicht valt op het water.',
+              'title' => 'Artist Presskit',
+              'location' => 'Zaandam',
+              'description' => 'Voor mijn projectweek fotografeerde ik Nazli. Tijdens de shoot heb ik haar in een hip hop sfeer vastgelegd.
+               Hieronder vind je een selectie van mijn favoriete beelden.',
           ],
           2 => [
               'title' => 'Stilte',
@@ -29,9 +30,38 @@ Route::get('/about', function () {
               'description' => 'Een rustig moment aan zee.',
           ],
           3 => [
-              'title' => 'Onderweg',
-              'location' => 'Rotterdam',
-              'description' => 'Lijnen en schaduwen in de stad.',
+             'title' => 'Straat-Portretten',
+            'location' => 'Amsterdam',
+            'description' => 'Dit foto is op meerdere exposities tentoongesteld. 
+            Onder andere bij het Mediacollege Amsterdam, waar ik momenteel studeer, 
+            in Theater De Krakeling en als hoogtepunt tijdens de Dutch Design Week 2026 in Eindhoven.
+             Het hoogtepunt in mijn fotografiecarrière tot nu toe.',
+          ],
+          4 => [
+            'title' => 'Straat-Portretten',
+            'location' => 'Amsterdam',
+            'description' => 'het verhaal van begin tot het heden.',
+          ],
+          5 => [
+            'title' => 'Straat-Portretten',
+            'location' => 'Amsterdam',
+            'description' => 'het verhaal van begin tot het heden.',
+          ],
+            6 => [
+            'title' => 'Straat-Portretten',
+            'location' => 'Amsterdam',
+            'description' => 'Het hoogtepunt daarvan is het portret van de man met de muts. 
+            Door de mooie kleuren en zijn glimlach werd dit voor mij de eerste echte sterke straatportret.',
+          ],
+            7 => [
+            'title' => 'Merel',
+            'location' => 'Amsterdam',
+            'description' => 'het verhaal van begin tot het heden.',
+          ],
+           8 => [
+            'title' => 'Merel',
+            'location' => 'Amsterdam',
+            'description' => 'het verhaal van begin tot het heden.',
           ],
       ];
 

@@ -105,6 +105,12 @@
                   padding-top: 32px;
               }
           }
+            .photo-description {
+      max-width: 650px;
+      margin-top: 24px;
+      font-size: 20px;
+      line-height: 1.6;
+  }
       </style>
   </head>
 
@@ -124,7 +130,7 @@
                   >
 
                   <figcaption>
-                      FOTO {{ $number }} VAN 56
+                      FOTO {{ $number }} VAN 57
                   </figcaption>
               </figure>
 
@@ -141,13 +147,14 @@
 
                   <div class="detail-row">
                       <dt>Locatie</dt>
-                      <dd>Nog invullen</dd>
+                      <dd>{{ $location }}</dd>
                   </div>
 
                   <div class="detail-row">
-                      <dt>Jaar</dt>
-                      <dd>Nog invullen</dd>
+                      <dt>Beschrijving</dt>
+                      <dd>{{ $description }}</dd>
                   </div>
+
               </dl>
           </div>
 
