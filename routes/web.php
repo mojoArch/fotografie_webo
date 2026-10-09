@@ -182,36 +182,38 @@ Route::get('/about', function () {
             'location' => 'Den Helder',
             'description' => 'Natuurlandschap',
           ],
-            31 => [
-            'title' => 'Tulp',
-            'location' => 'Den Helder',
-            'description' => 'Natuurlandschap',
-          ],
+          
+31 => [
+    'title' => 'Noordkop',
+    'location' => 'Den Helder',
+    'description' => 'Onderdeel van een fotografische verkenning van het natuurlandschap rond Den Helder.',
+],
+33 => [
+    'title' => 'Noordkop',
+    'location' => 'Den Helder',
+    'description' => 'Een tweede perspectief op het landschap rond Den Helder, uit de serie Noordkop.',
+],
+34 => [
+    'title' => 'Buitenbeeld',
+    'location' => 'Den Helder',
+    'description' => 'Een persoonlijke blik op de natuur van Den Helder.',
+],
+35 => [
+    'title' => 'Stil Land',
+    'location' => 'Den Helder',
+    'description' => 'Een landschapsstudie waarin rust en aandacht voor de omgeving centraal staan.',
+],
+36 => [
+    'title' => 'Natuurlijk Ritme',
+    'location' => 'Den Helder',
+    'description' => 'Een verkenning van vormen en details in het landschap van Den Helder.',
+],
            32 => [
             'title' => 'Parfum',
             'location' => 'Den Helder',
-            'description' => 'Natuurlandschap',
+            'description' => 'Fashion fotografie, een parfum shoot.',
           ],
-            33 => [
-            'title' => 'Tulp',
-            'location' => 'Den Helder',
-            'description' => 'Natuurlandschap',
-          ],
-              34 => [
-            'title' => 'Paarden',
-            'location' => 'Den Helder',
-            'description' => 'Natuurlandschap',
-          ],
-            35 => [
-            'title' => 'Sproei-machine',
-            'location' => 'Den Helder',
-            'description' => 'Natuurlandschap',
-          ],
-      36 => [
-      'title' => 'Het Oneindig Pad',
-      'location' => 'Den Helder',
-      'description' => 'Natuurlandschap',
-    ],
+
      37 => [
       'title' => 'Theodore',
       'location' => 'Den Helder',
@@ -302,11 +304,11 @@ Route::get('/about', function () {
             'location' => 'Amsterdam',
             'description' => 'het verhaal van begin tot het heden.',
           ],
-              54 => [
-            'title' => 'Oneindig varen',
-            'location' => 'Texel',
-            'description' => 'het verhaal van begin tot het heden.',
-          ],
+54 => [
+    'title' => 'Eilandblik',
+    'location' => 'Texel',
+    'description' => 'Het landschap van Texel, vastgelegd vanuit een persoonlijk perspectief.',
+],
             55 => [
             'title' => 'Oneindig liefde',
             'location' => 'Texel',
