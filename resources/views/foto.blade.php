@@ -164,6 +164,7 @@
                   <img
                       src="{{ asset($image) }}"
                       alt="{{ $title }} — fotografie van Jamie Vis"
+                      loading="lazy"
                   >
 
                   <figcaption>

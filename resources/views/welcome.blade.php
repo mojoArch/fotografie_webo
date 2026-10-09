@@ -198,17 +198,15 @@
       <section class="gallery" aria-label="Fotocollectie">
 
   @for ($i = 1; $i <= 57; $i++)
-      @php
-          $extension = $i <= 52 ? 'jpg' : 'webp';
-      @endphp
 
 
   <figure class="photo">
       <a href="{{ url('/foto/' . $i) }}">
           <img
-              src="{{ asset('images/foto' . $i . '.' . $extension) }}"
+              src="{{ asset('images/thumbs/foto' . $i . '.webp') }}"
               alt="Foto {{ $i }} gemaakt door Jamie Vis"
               loading="lazy"
+              decoding="async"
           >
       </a>
   </figure>
