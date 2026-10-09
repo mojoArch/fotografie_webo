@@ -184,11 +184,14 @@
     <header class="header">
         <a href="#"> JAMIE VIS</a>
         <nav class="nav" aria-label="Hoofdnavigatie">
+            <a href="mailto:jamie.vis07@gmail.com" target="_blank" rel="noopener noreferrer">
+                email
+            </a>
             <a href="https://www.instagram.com/jvis.photography?stkn=bGZlb2V1YWF1aGNn"
             target="_blank" rel="noopener noreferrer" >
             instagram   
             </a>
-            <a href="linkedin.com/in/jamie-vis-8a774b349" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.linkedin.com/in/jamie-vis-8a774b349/overlay/contact-info/" target="_blank" rel="noopener noreferrer"
             >Linkedin</a>
             <a href="{{ url('/about') }}">About</a>
         </nav>
