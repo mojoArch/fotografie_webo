@@ -49,6 +49,10 @@
               gap: 32px;
           }
 
+          .related-photos + .photo-layout {
+              margin-top: clamp(32px, 5vw, 80px);
+          }
+
           figure {
               margin: 0;
           }
@@ -130,6 +134,46 @@
           grid-template-columns: 1fr;
       }
   }
+          .photo-zoom {
+              display: block;
+              width: 100%;
+              padding: 0;
+              border: 0;
+              background: transparent;
+              cursor: zoom-in;
+          }
+
+          .photo-viewer {
+              width: 96vw;
+              max-width: 96vw;
+              max-height: 96dvh;
+              padding: 52px 16px 16px;
+              border: 0;
+              background: #111;
+              color: white;
+          }
+
+          .photo-viewer::backdrop {
+              background: rgb(0 0 0 / 90%);
+          }
+
+          .photo-viewer img {
+              display: block;
+              width: 100%;
+              height: 80dvh;
+              object-fit: contain;
+          }
+
+          .close-viewer {
+              position: absolute;
+              top: 12px;
+              right: 16px;
+              padding: 8px;
+              border: 0;
+              background: transparent;
+              color: white;
+              cursor: pointer;
+          }
       </style>
   </head>
 
@@ -139,6 +183,7 @@
           <strong>JAMIE VIS</strong>
           <a class="about-link" href="{{ url('/about') }}">About</a>
       </header>
+      <main>
                 <h1>{{ $title }}</h1>
 
           @if (count($relatedPhotos) > 0)
@@ -154,18 +199,17 @@
                   @endforeach
               </section>
           @endif
-      </main>
-  </body>
-  </html>
 
-      <main>
           <div class="photo-layout">
               <figure>
+                  <button type="button" class="photo-zoom" aria-label="Foto vergroten" aria-haspopup="dialog">
                   <img
                       src="{{ asset($image) }}"
                       alt="{{ $title }} — fotografie van Jamie Vis"
                       loading="lazy"
                   >
+
+                  </button>
 
                   <figcaption>
                       FOTO {{ $number }} VAN 58
@@ -199,5 +243,27 @@
 
          
       </main>
+      <dialog id="photo-viewer" class="photo-viewer" aria-label="Vergrote foto: {{ $title }}">
+          <form method="dialog">
+              <button class="close-viewer" autofocus>Sluiten ✕</button>
+          </form>
+          <img data-src="{{ asset($image) }}" alt="{{ $title }} — vergrote weergave">
+      </dialog>
+
+      <script>
+          const photoViewer = document.getElementById('photo-viewer');
+          const enlargedPhoto = photoViewer.querySelector('img');
+
+          document.querySelector('.photo-zoom').addEventListener('click', () => {
+              enlargedPhoto.src = enlargedPhoto.dataset.src;
+              photoViewer.showModal();
+          });
+
+          photoViewer.addEventListener('click', (event) => {
+              if (event.target === photoViewer) {
+                  photoViewer.close();
+              }
+          });
+      </script>
   </body>
   </html>
