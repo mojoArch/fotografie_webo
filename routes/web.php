@@ -285,7 +285,7 @@ Route::get('/foto/{id}', function (string $id) {
         50 => [
             'title' => 'The Blue Glance',
             'location' => 'Bosnia',
-            'description' => 'Een inspirenrd moment.',
+            'description' => 'In The Blue Glance komen portret en reis samen. Het blauw vormt de rode draad, maar mijn aandacht ligt bij de persoon: een blik opzij, een spontane lach, een moment waarop de camera even vergeten wordt. Juist die afwisseling maakt de serie voor mij persoonlijk.',
         ],
         51 => [
             'title' => 'Marijn',
