@@ -80,22 +80,7 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-Kopieer .env.example alleen als je nog geen eigen .env hebt. Pas daarin de volgende instellingen aan. Het wachtwoord hieronder is een voorbeeld voor lokaal gebruik.
-
-```dotenv
-APP_NAME="JVIS Fotografie"
-APP_URL=http://localhost
-APP_PORT=80
-DB_CONNECTION=mysql
-DB_HOST=mysql
-DB_PORT=3306
-DB_DATABASE=laravel
-DB_USERNAME=sail
-DB_PASSWORD=password
-FORWARD_DB_PORT=3307
-```
-
-Start daarna de containers:
+Start de containers:
 
 ```bash
 ./vendor/bin/sail up -d
